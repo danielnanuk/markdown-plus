@@ -31,6 +31,19 @@ const promptForValue = (key, action) => {
 }
 
 const registerToolBarEvents = () => {
+  $("#hidden_file").change(function() {
+    var reader = new FileReader();
+    var file = this.files[0];
+    reader.onload = function() {
+      editor.setValue(this.result)
+    }
+    var text = reader.readAsText(file);
+  });
+
+  $("#open").click((event) => {
+    $("#hidden_file").trigger("click");
+  });
+
   // h1 - h6 heading
   $('.heading-icon').click((event) => {
     const level = $(event.currentTarget).data('level')

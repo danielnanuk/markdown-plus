@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
   </head>
   <body>
+    <input id="hidden_file" type="file" style="display:none"/>
     <div id="mdp-container" style="height: 99%;">
       <div class="ui-layout-north">
         <div id="toolbar" class="noselect">
+          <i id="open" title="Open" class="fa fa-folder-o"></i>
           <i title="Bold" class="fa fa-bold styling-icon" data-modifier="**"></i>
           <i title="Italic" class="fa fa-italic styling-icon" data-modifier="*"></i>
           <i title="Strikethrough" class="fa fa-strikethrough styling-icon" data-modifier="~~"></i>
@@ -197,6 +199,7 @@ T3: 2014-01-02, 9d"></i>
         <article class="markdown-body" id="preview"></article>
       </div>
     </div>
+    <script src="fileSaver.js"></script>
     <script src="index.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
