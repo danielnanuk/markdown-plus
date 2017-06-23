@@ -90,3 +90,5 @@ Copyright © 2015 - 2017 [Tylingsoft](http://tylingsoft.com/)
 ## Todo
 
 - Get rid of jQuery
+- Add save/open 
+- User worker thread to render
