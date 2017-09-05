@@ -48,7 +48,7 @@ themes.forEach((theme) => {
 const mac = CodeMirror.keyMap['default'] === CodeMirror.keyMap.macDefault
 const ctrl = mac ? 'Cmd' : 'Ctrl'
 
-export const editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+const editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
   lineNumbers: true,
   mode: 'gfm',
   theme: 'default',
