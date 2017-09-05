@@ -30,10 +30,21 @@ const promptForValue = (key, action) => {
   })
 }
 
+let currentFile = '';
+
 const registerToolBarEvents = () => {
+  $("#save").click( (event) => {
+    var FileSaver = require('file-saver');
+    var text=editor.getValue();
+    var blob = new Blob([text], {type:"text/plain;charset=utf-8"});
+
+    FileSaver.saveAs(blob, currentFile.name);
+  });
+
   $("#hidden_file").change(function() {
     var reader = new FileReader();
     var file = this.files[0];
+    currentFile = file;
     reader.onload = function() {
       editor.setValue(this.result)
     }
